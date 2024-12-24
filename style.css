@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-image: url("https://images.unsplash.com/photo-1731945573953-ef1edae2c558?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: #11182A;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 1.2rem;
+    gap: 2.4rem;
+}
+li {
+    display: flex;
+    cursor: pointer;
+    padding: 1rem;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+li:hover span::before {
+    top: -5px;
+}
+li:hover span::after {
+    top: 1.5rem;
+}
+span {
+    display: flex;
+    position: relative;
+    color: transparent;
+    overflow: hidden;
+}
+span::before {
+    content: attr(text);
+    position: absolute;
+    color: red;
+    top: -2rem;
+    transition: 0.5s;
+}
+span::after {
+    content: attr(text);
+    color: #fff;
+    top: -5px;
+    transition: 0.5sec;
+    position: absolute;
+}
+span:nth-child(2)::after,
+span:nth-child(2)::before {
+    transition-delay: 100ms;
+}
+span:nth-child(3)::after,
+span:nth-child(3)::before {
+    transition-delay: 150ms;
+}
+span:nth-child(4)::after,
+span:nth-child(4)::before {
+    transition-delay: 200ms;
+}
+span:nth-child(5)::after,
+span:nth-child(5)::before {
+    transition-delay: 250ms;
+}
+span:nth-child(6)::after,
+span:nth-child(6)::before {
+    transition-delay: 300ms;
+}
+span:nth-child(7)::after,
+span:nth-child(7)::before {
+    transition-delay: 350ms;
+}
+input {
+    padding: 4px 12px;
+    outline: none;
+    border: 2px solid #FD7102;
+}
+button {
+    padding: 4px 12px;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid #FD7102;
+    background-color: #FD7102;
+}
+#left .btn {
+    border: none;
+    padding: 16px 30px;
+    color: #fff;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: 0.2s;
+}
+.btn:hover {
+    box-shadow: 0 0 0 4px #fff,
+        0 0 0 8px #4070f4;
+}
+section {
+    height: 620px;
+    width: 100%;
+    display: flex;
+}
+#left {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#left .box {
+    height: 60%;
+    width: 85%;
+}
+.box h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: white;
+}
+.color {
+    font-size: 3rem;
+    display: inline;
+    line-height: 3.4rem;
+    color: #FD7102;
+}
+p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: lighter;
+    display: inline;
+}
+.para {
+    background-image: linear-gradient(to right, #324669, #324669);
+    background-size: 0px 3px;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    transition: 0.5s;
+}
+div:hover>.para {
+    background-size: 100% 100%;
+    font-size: 1rem;
+}
+.btn {
+    padding: 7px 25px;
+    margin-top: 27px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#right {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+.card .logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    line-height: 130px;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto 30px auto;
+    background: #1c80ec;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+.card .search_bar {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+.card .search_bar input {
+    width: 100%;
+    padding: 0 20px;
+    color: #717070;
+    line-height: 45px;
+    background: none;
+    outline: none;
+    border: 0;
+}
+.card .check {
+    display: flex;
+    margin-bottom: 15px;
+    color: #919191;
+}
+.card .check input {
+    margin-right: 10px;
+    accent-color: #1c80ec;
+}
+.card button {
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+    background: #1c80ec;
+    color: #fff;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+.card p.forget {
+    text-align: center;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+}
+.card p.forget span {
+    margin: 0 5px;
+    color: black;
+}
